@@ -4,20 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tenebris Arcaneus - Produtos</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="advanced.css">
 </head>
 <body>
   <!-- Cabeçalho e Navegação -->
   <header>
     <div class="container header-container">
+      <span class="mobile-nav-toggle">&#8230;</span>
       <h1>Tenebris Arcaneus</h1>
       <nav>
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="about.html">Sobre</a></li>
           <li><a href="products.html">Produtos</a></li>
+          <li><a href="investors.html">Investidores</a></li>
           <li><a href="contact.html">Contato</a></li>
-          <li><a href="rights.html">Direitos</a></li>
         </ul>
       </nav>
     </div>
@@ -31,26 +32,26 @@
         <div class="product">
           <h3>Network Scanner</h3>
           <p>
-            Script avançado para escanear redes, identificar dispositivos e mapear serviços ativos. Ideal para auditorias de segurança.
+            Script avançado para escanear redes, identificar dispositivos e mapear serviços ativos.
           </p>
           <p class="price">R$ 299,00</p>
-          <a href="#" class="btn buy-btn">Comprar</a>
+          <button class="btn buy-btn" data-product-id="1" data-product-name="Network Scanner" data-product-price="299.00">Comprar</button>
         </div>
         <div class="product">
           <h3>Web Vulnerability Scanner</h3>
           <p>
-            Ferramenta para detectar vulnerabilidades em aplicações web, garantindo a identificação precoce de falhas de segurança.
+            Ferramenta para detectar vulnerabilidades em aplicações web.
           </p>
           <p class="price">R$ 399,00</p>
-          <a href="#" class="btn buy-btn">Comprar</a>
+          <button class="btn buy-btn" data-product-id="2" data-product-name="Web Vulnerability Scanner" data-product-price="399.00">Comprar</button>
         </div>
         <div class="product">
           <h3>Exploit Finder</h3>
           <p>
-            Descubra potenciais exploits e falhas em sistemas com este script inovador, indispensável para testes de penetração.
+            Descubra potenciais exploits e falhas em sistemas com este script inovador.
           </p>
           <p class="price">R$ 349,00</p>
-          <a href="#" class="btn buy-btn">Comprar</a>
+          <button class="btn buy-btn" data-product-id="3" data-product-name="Exploit Finder" data-product-price="349.00">Comprar</button>
         </div>
       </div>
       <p class="disclaimer">
@@ -59,12 +60,34 @@
     </div>
   </section>
 
+  <!-- Modal de Compra -->
+  <div id="purchase-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Finalizar Compra</h2>
+      <div id="modal-product-info">
+        <!-- Informações do produto selecionado serão exibidas aqui -->
+      </div>
+      <form id="purchase-form">
+        <input type="hidden" name="product_id" id="product_id">
+        <label for="buyer_name">Seu Nome:</label>
+        <input type="text" name="buyer_name" id="buyer_name" required>
+        <label for="buyer_email">Seu E-mail:</label>
+        <input type="email" name="buyer_email" id="buyer_email" required>
+        <button type="submit" class="btn">Comprar</button>
+      </form>
+      <div id="purchase-response"></div>
+    </div>
+  </div>
+
   <!-- Rodapé -->
   <footer>
     <div class="container">
-      <p>&copy; 2025 Tenebris Arcaneus. Todos os direitos reservados.</p>
+      <p>&copy; 2025 Tenebris Arcaneus. <a href="rights.html">Todos os Direitos Reservados</a>.</p>
       <p><a href="https://github.com/tenebrisarcaneus" target="_blank">GitHub</a></p>
     </div>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
