@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tenebris Arcaneus - Acesso Liberado</title>
+  <link rel="stylesheet" href="advanced.css">
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <span class="mobile-nav-toggle">&#8230;</span>
+      <h1>Tenebris Arcaneus</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="products.html">Produtos</a></li>
+          <li><a href="investors.html">Investidores</a></li>
+          <li><a href="contact.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="access">
+    <div class="container">
+      <h2>Insira seu Token de Pagamento</h2>
+      <p>Após o pagamento com criptomoeda, você receberá um token. Insira-o abaixo para acessar o repositório privado:</p>
+      <form action="release.php" method="get">
+        <label for="payment_token">Token de Pagamento:</label>
+        <input type="text" name="payment_token" id="payment_token" required>
+        <!-- Opcional: campo para informar o seu GitHub username -->
+        <label for="username">Seu GitHub Username (opcional):</label>
+        <input type="text" name="username" id="username">
+        <button type="submit" class="btn">Liberar Acesso</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Tenebris Arcaneus. <a href="rights.html">Todos os Direitos Reservados</a>.</p>
+      <p><a href="https://github.com/tenebrisarcaneus" target="_blank">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
