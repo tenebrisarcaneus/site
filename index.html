@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Tenebris Arcaneus - Ultimate Hacking Tool com IA para pentest, OSINT, forense digital e muito mais. Aprimore sua segurança cibernética com esta ferramenta avançada.">
+  <meta name="keywords" content="Tenebris Arcaneus, Hacking Ético, Pentest, OSINT, Forense Digital, Segurança Cibernética, Ferramenta de Pentest, IA para Hacking, Vulnerabilidades, Hacker Ético">
+  <meta name="author" content="Tenebris Arcaneus">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tenebris Arcaneus - Ultimate Hacking Tool com IA</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: #f7f7f7;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    header {
+      background: url('https://source.unsplash.com/1600x900/?cybersecurity,technology') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+    header h1 {
+      font-size: 3.5em;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      text-align: center;
+    }
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      padding: 15px 20px;
+      font-weight: 500;
+      font-size: 0.9em;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #444;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    section {
+      background: #fff;
+      margin: 20px 0;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    section h2 {
+      margin-bottom: 15px;
+      color: #222;
+      font-size: 2em;
+      border-bottom: 2px solid #e74c3c;
+      padding-bottom: 5px;
+    }
+    section p, section li {
+      margin-bottom: 10px;
+      font-size: 1em;
+      line-height: 1.7;
+    }
+    section ul {
+      list-style: disc inside;
+      margin-left: 20px;
+    }
+    .price {
+      font-size: 2em;
+      color: #e74c3c;
+      font-weight: 700;
+      margin: 20px 0;
+    }
+    .buy-btn {
+      display: inline-block;
+      background: #e74c3c;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-size: 1.1em;
+      transition: background 0.3s;
+      margin-top: 15px;
+    }
+    .buy-btn:hover {
+      background: #c0392b;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 30px;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: #e74c3c;
+      font-weight: 700;
+    }
+    /* Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+    }
+    .modal-content {
+      background: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .close {
+      color: #333;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+      color: #e74c3c;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.5em;
+      }
+      nav a {
+        padding: 10px 15px;
+        font-size: 0.85em;
+      }
+      .price {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Tenebris Arcaneus</h1>
+      <p>Ultimate Hacking Tool - Direitos: Tenebris Arcaneus</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">Sobre</a>
+    <a href="#features">Funcionalidades</a>
+    <a href="#howitworks">Como Funciona</a>
+    <a href="#pricing">Preço</a>
+    <a href="#contact">Contato</a>
+  </nav>
+
+  <div class="container">
+    <!-- Seção Sobre -->
+    <section id="about">
+      <h2>Sobre o Tenebris Arcaneus</h2>
+      <p>O <strong>Tenebris Arcaneus</strong> é a ferramenta definitiva para pentesters, analistas de segurança e entusiastas de cibersegurança. Integrando um robusto conjunto de ferramentas – de OSINT a forense digital – ele torna os testes de segurança uma tarefa simples, automatizada e altamente eficiente.</p>
+      <p>Com um módulo de inteligência artificial integrado, o Tenebris Arcaneus fornece sugestões inteligentes para aprimorar suas análises e estratégias de segurança.</p>
+    </section>
+
+    <!-- Seção Funcionalidades -->
+    <section id="features">
+      <h2>Funcionalidades</h2>
+      <ul>
+        <li><strong>Menu Interativo:</strong> Acesso fácil a diversas ferramentas em um só lugar.</li>
+        <li><strong>Instalação e Configuração Automática:</strong> Detecta e instala ferramentas ausentes, configurando-as conforme necessário.</li>
+        <li><strong>Relatórios e Logs Detalhados:</strong> Gera registros e relatórios de cada teste para auditoria e análise.</li>
+        <li><strong>IA Integrada:</strong> Sugestões inteligentes para aprimorar suas estratégias de segurança.</li>
+        <li><strong>Modos Avançados:</strong> Execução remota, automação agendada e modo stealth para operações discretas.</li>
+        <li><strong>Suporte a Múltiplas Ferramentas:</strong> Ferramentas para OSINT, pentest, ataques web, redes, engenharia social, forense digital e muito mais.</li>
+      </ul>
+    </section>
+
+    <!-- Seção Como Funciona -->
+    <section id="howitworks">
+      <h2>Como Funciona</h2>
+      <p>Ao executar o script <code>tenebris_arcaneus.sh</code>, você terá acesso a um menu interativo onde:</p>
+      <ul>
+        <li>O sistema verifica se as ferramentas estão instaladas e, se necessário, as instala automaticamente.</li>
+        <li>São exibidas explicações detalhadas e exemplos práticos de uso para cada ferramenta.</li>
+        <li>Os comandos são executados com os parâmetros informados, e relatórios são gerados automaticamente.</li>
+        <li>A inteligência artificial integrada fornece sugestões para melhorar seus testes e análises.</li>
+      </ul>
+      <p>Tudo isso é feito de forma integrada para simplificar o processo de pentest e auditoria – perfeito para iniciantes e profissionais.</p>
+    </section>
+
+    <!-- Seção Preço -->
+    <section id="pricing">
+      <h2>Preço</h2>
+      <p class="price">US$ 50.00</p>
+      <p>Ou aproximadamente <strong>R$ 250,00</strong> (valor sujeito à cotação atual).</p>
+      <p>Adquira o Tenebris Arcaneus e transforme sua prática de segurança cibernética!</p>
+      <!-- Atualize o href abaixo com o link real da sua página de venda -->
+      <a class="buy-btn" href="https://seulinkdecompra.com" target="_blank">Comprar Agora</a>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contact">
+      <h2>Contato</h2>
+      <p>Para dúvidas, suporte ou treinamentos personalizados, entre em contato:</p>
+      <p>Email: <a href="mailto:contato@tenebrisarcaneus.com">contato@tenebrisarcaneus.com</a></p>
+      <p>WhatsApp: +55 11 91234-5678</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tenebris Arcaneus. Todos os direitos reservados.</p>
+    <p>Siga-nos no <a href="https://x.com/TArcaneus" target="_blank">X/TArcaneus</a></p>
+  </footer>
+
+  <!-- Modal de Confirmação de Compra (Opcional, se desejar usar para confirmar o pagamento) -->
+  <div id="purchaseModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Compra Realizada!</h2>
+      <p>Obrigado por adquirir o Tenebris Arcaneus por US$ 50.00.</p>
+      <p>Você receberá um e-mail com instruções para download e ativação.</p>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript para exibir o modal de compra (opcional)
+    document.getElementById('buyNow').addEventListener('click', function(e) {
+      e.preventDefault();
+      // Redireciona para a página de compra
+      window.location.href = this.href;
+      // Caso deseje utilizar o modal, descomente as linhas abaixo:
+      // document.getElementById('purchaseModal').style.display = "block";
+    });
+
+    // Fechar o modal quando o usuário clicar no 'X'
+    document.querySelector('.close').addEventListener('click', function() {
+      document.getElementById('purchaseModal').style.display = "none";
+    });
+
+    // Fechar o modal se o usuário clicar fora dele
+    window.onclick = function(event) {
+      var modal = document.getElementById('purchaseModal');
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
